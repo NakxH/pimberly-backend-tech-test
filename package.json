@@ -1,0 +1,24 @@
+{
+  "name": "pimberly-backend-tech-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NakxH/pimberly-backend-tech-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NakxH/pimberly-backend-tech-test/issues"
+  },
+  "homepage": "https://github.com/NakxH/pimberly-backend-tech-test#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.5"
+  }
+}
