@@ -1,8 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const fs = require("fs");
-const csvFilePath = "/files/products.csv";
 const Product = require("./models/Product");
+
+const csvFilePath = "/files/products.csv";
 
 /*
   Function that imports a csv file with headers from a specified path
@@ -26,6 +27,7 @@ async function handleFile(path) {
     const rows = fileContents.split("\n");
 
     for (let i = 0; i < rows.length; i++) {
+      // Skip csv headers
       if (i > 0) {
         const cols = rows[i].split(",");
 
@@ -84,7 +86,9 @@ async function handleFile(path) {
   Connect to databse and start express app
 */
 mongoose
-  .connect("mongodb://localhost:27017/pimberly", { useNewUrlParser: true })
+  .connect("mongodb://localhost:27017/hakan-cimen-pimberly-tt", {
+    useNewUrlParser: true,
+  })
   .then(async () => {
     const app = express();
 
