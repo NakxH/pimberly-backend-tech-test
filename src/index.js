@@ -45,43 +45,6 @@ async function handleFile() {
   } catch (err) {
     console.error(err);
   }
-
-  //   await fs.promises.readFile(__dirname + csvFilePath, async (err, data) => {
-  //     if (!err) {
-  //       const fileContents = data.toString();
-  //       const rows = fileContents.split("\n");
-
-  //       rows.forEach((row, index) => {
-  //         if (index === 0) return;
-  //         const cols = row.split(",");
-
-  //         if (cols[0] === "") {
-  //           console.log(`missing sku @ ${index}`);
-  //           return;
-  //         }
-  //         if (cols[1] === "") {
-  //           console.log(`missing colour @ ${index}`);
-  //           return;
-  //         }
-  //         if (cols[2] === "") {
-  //           console.log(`missing size @ ${index}`);
-  //           return;
-  //         }
-
-  //         Product.findOne({ sku: cols[0] }).then((value) => {
-  //           console.log(value);
-  //           if (value === null) {
-  //             const product = new Product({
-  //               sku: cols[0],
-  //               colour: cols[1],
-  //               size: cols[2],
-  //             });
-  //             await product.save();
-  //           }
-  //         });
-  //       });
-  //     }
-  //   });
 }
 
 mongoose
